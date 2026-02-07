@@ -1,0 +1,8 @@
+AllCops:
+  NewCops: enable
+
+plugins:
+  - rubocop-rspec
+
+Style/Documentation:
+  Enabled: false
