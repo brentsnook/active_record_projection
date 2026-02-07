@@ -2,7 +2,7 @@
 
 module ActiveRecordProjection
   class ProjectedEventRegistry
-    @@event_types = Set.new
+    @event_types = Set.new
     cattr_accessor :event_types, :unsubscribe_handler
 
     def self.register(event_types)
