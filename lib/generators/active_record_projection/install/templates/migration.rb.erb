@@ -1,0 +1,15 @@
+class <%= migration_name.camelize %> < ActiveRecord::Migration[<%= Rails::VERSION::MAJOR %>.<%= Rails::VERSION::MINOR %>]
+  def change
+    create_table :active_record_projection_projections, id: :uuid do |t|
+      t.string :stream, null: false
+      t.integer :lock_version, null: false, default: 0
+      t.uuid :last_event_id, null: true
+      t.references :record, polymorphic: true
+
+      t.timestamps
+    end
+
+    add_index :active_record_projection_projections, [:record_id, :record_type]
+    add_index :active_record_projection_projections, [:stream]
+  end
+end

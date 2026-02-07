@@ -61,7 +61,7 @@ gem 'activerecord-projection', git: 'https://github.com/brentsnook/activerecord-
 
 Create a `active_record_projection_projections` table in your database:
 ```bash
-bundle exec rails generate active_record_projection:install
+bundle exec rails generate activerecord-projection:install
 ```
 
 ## Example

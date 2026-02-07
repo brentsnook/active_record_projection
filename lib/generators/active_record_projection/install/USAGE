@@ -1,0 +1,8 @@
+Description:
+  Generates a migration to add the projections table including indexes.
+
+Examples:
+  rails generate active_record_projection:install
+
+  This will create:
+    db/migrate/[TIMESTAMP]_create_active_record_projection_projections.rb
