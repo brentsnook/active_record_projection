@@ -15,9 +15,9 @@ module ActiveRecordProjection
       delegate :last_event_id, :last_event_id=, :stream, to: :projection, allow_nil: true
       after_initialize :add_projection, :initialize_transient
 
-      def self.on(*event_klasses, &block)
+      def self.on(*event_klasses, &)
         ProjectedEventRegistry.register(event_klasses)
-        super(*event_klasses, &block)
+        super
       end
     end
 
