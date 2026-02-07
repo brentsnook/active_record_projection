@@ -9,12 +9,14 @@ Gem::Specification.new do |s|
   s.email = 'brent@fuglylogic.com'
   s.homepage = 'https://github.com/brentsnook/active_record_projection'
   s.license = 'MIT'
+  s.required_ruby_version = '>= 3.1'
   s.required_rubygems_version = '>= 3.1'
 
   s.files = Dir['lib/**/*', 'README.md']
 
-  s.add_dependency 'aggregate_root'
   s.add_dependency 'activerecord'
   s.add_dependency 'activesupport'
+  s.add_dependency 'aggregate_root'
   s.add_dependency 'rails_event_store'
+  s.metadata['rubygems_mfa_required'] = 'true'
 end
