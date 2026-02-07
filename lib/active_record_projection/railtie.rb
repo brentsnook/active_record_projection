@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ActiveRecordProjection
   class Railtie < ::Rails::Railtie
     config.after_initialize do

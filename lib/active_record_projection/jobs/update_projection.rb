@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'active_record_projection/models/projection'
 
 module ActiveRecordProjection

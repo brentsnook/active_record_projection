@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'active_record_projection/models/projection'
 require 'active_record_projection/projected_event_registry'
 
@@ -7,6 +9,7 @@ module ActiveRecordProjection
 
     included do
       include AggregateRoot
+
       has_one :projection, class_name: 'ActiveRecordProjection::Models::Projection', as: :record
 
       delegate :last_event_id, :last_event_id=, :stream, to: :projection, allow_nil: true
@@ -23,7 +26,7 @@ module ActiveRecordProjection
     # as unseen events are applied
     def update_projection!
       apply_unseen
-        
+
       ActiveRecord::Base.transaction do
         save!
         projection.save!

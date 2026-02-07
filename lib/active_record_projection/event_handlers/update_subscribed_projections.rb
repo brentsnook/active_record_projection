@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # don't require this file, RailsEventStore::AsyncHandler requires rails to be configured first
 
 require 'active_record_projection/jobs/update_projection'
