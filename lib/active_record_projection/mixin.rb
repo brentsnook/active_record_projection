@@ -37,7 +37,7 @@ module ActiveRecordProjection
 
     def apply_unseen
       query = Rails.configuration.event_store.read.stream(stream)
-      query = last_event_id ? query.from(last_event_id) : query
+      query = query.from(last_event_id) if last_event_id
       query.reduce do |_, ev|
         apply(ev)
         self.last_event_id = ev.event_id
