@@ -56,12 +56,12 @@ classDiagram
 ## Installation
   Not yet published as a gem, 
 ```ruby
-gem 'activerecord-projection', git: 'https://github.com/brentsnook/activerecord-projection'
+gem 'activerecord-projection', git: 'https://github.com/brentsnook/active_record_projection'
 ```
 
 Create a `active_record_projection_projections` table in your database:
 ```bash
-bundle exec rails generate activerecord-projection:install
+bundle exec rails generate active_record_projection:install
 ```
 
 ## Example
