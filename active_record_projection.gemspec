@@ -13,6 +13,7 @@ Gem::Specification.new do |s|
   s.email = 'brent@fuglylogic.com'
   s.homepage = 'https://github.com/brentsnook/active_record_projection'
   s.license = 'MIT'
+  s.require_paths = ['lib']
   s.required_ruby_version = '>= 3.1'
   s.required_rubygems_version = '>= 3.1'
 
