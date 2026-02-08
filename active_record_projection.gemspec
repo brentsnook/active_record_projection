@@ -24,5 +24,10 @@ Gem::Specification.new do |s|
   s.add_dependency 'aggregate_root'
   s.add_dependency 'rails_event_store'
 
-  s.metadata['rubygems_mfa_required'] = 'true'
+  s.metadata = {
+    'source_code_uri' => s.homepage,
+    'bug_tracker_uri' => "#{s.homepage}/issues",
+    'changelog_uri' => "#{s.homepage}/blob/main/CHANGELOG.md",
+    'rubygems_mfa_required' => 'true'
+  }
 end
