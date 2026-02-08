@@ -54,9 +54,9 @@ classDiagram
 ```
 
 ## Installation
-  Not yet published as a gem, 
+Add to your `Gemfile` and run `bundle`.
 ```ruby
-gem 'activerecord-projection', git: 'https://github.com/brentsnook/active_record_projection'
+gem 'active_record_projection'
 ```
 
 Create a `active_record_projection_projections` table in your database:
@@ -64,7 +64,7 @@ Create a `active_record_projection_projections` table in your database:
 bundle exec rails generate active_record_projection:install
 ```
 
-## Example
+## Adding an Active Record Projection
 To make your Active Record model a projection of an aggregate root:
 - include `ActiveRecordProjection`
 - define a `get_stream` method to allow a stream to be determined from the model data
