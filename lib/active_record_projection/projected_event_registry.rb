@@ -2,8 +2,8 @@
 
 module ActiveRecordProjection
   class ProjectedEventRegistry
-    @event_types = Set.new
-    cattr_accessor :event_types, :unsubscribe_handler
+    class_attribute :event_types, default: Set.new
+    class_attribute :unsubscribe_handler
 
     def self.register(event_types)
       self.event_types.merge(event_types)
@@ -13,5 +13,7 @@ module ActiveRecordProjection
         to: self.event_types
       )
     end
+
+    private :event_types, :event_types=, :unsubscribe_handler, :unsubscribe_handler=
   end
 end
