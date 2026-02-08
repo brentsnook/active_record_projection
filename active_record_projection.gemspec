@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'activerecord'
   s.add_dependency 'activesupport'
   s.add_dependency 'aggregate_root'
+  s.add_dependency 'rails'
   s.add_dependency 'rails_event_store'
 
   s.metadata = {
